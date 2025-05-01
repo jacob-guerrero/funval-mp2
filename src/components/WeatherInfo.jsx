@@ -7,7 +7,7 @@ export default function WeatherInfo() {
         <img
           src="/images/10n.png"
           alt="weather icon"
-          className="w-full max-w-28 relative z-10"
+          className="w-full max-w-28 relative z-10 sm:max-w-40"
         />
       </picture>
 
