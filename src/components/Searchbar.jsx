@@ -1,6 +1,6 @@
 export default function Searchbar() {
   return (
-    <div className="flex justify-between items-center p-5 text-white">
+    <div className="h-1/7 flex justify-between items-center p-5 text-white">
       <input
         type="button"
         value="Search for a city..."

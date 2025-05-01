@@ -12,8 +12,8 @@ export default function WeatherInfo() {
       </picture>
 
       <div className="w-full h-3/7 text-white flex justify-center items-center">
-        <p className="text-9xl">19</p>
-        <p className="text-7xl text-gray-400">°C</p>
+        <h2 className="text-9xl">19</h2>
+        <h2 className="text-7xl text-gray-400">°C</h2>
       </div>
     </div>
   );
