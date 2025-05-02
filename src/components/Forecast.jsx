@@ -4,7 +4,7 @@ export default function Forecast() {
   return (
     <>
       <div className="w-full flex flex-col items-center justify-center py-4 md:py-0">
-        <div className="w-full max-w-sm p-8 flex justify-end gap-5 md:p-7">
+        <div className="w-full max-w-2xl px-4 py-8 flex justify-end gap-5 md:py-7 xl:px-0">
           <button className="w-10 h-10 pr-1 pt-1 text-center text-xl font-bold text-[#110E3C]  bg-[#E7E7EB] rounded-full">
             °C
           </button>
