@@ -1,1 +1,11 @@
 @import "tailwindcss";
+@theme {
+  --font-weather: "weatherFont", "serif";
+}
+@font-face {
+  font-family: weatherFont;
+  font-style: normal;
+  font-weight: 200 500 700;
+  font-display: swap;
+  src: url("/fonts/font.woff2") format("woff2");
+}

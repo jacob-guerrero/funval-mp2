@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Highlights() {
   return (
-    <div className="w-full px-4 pb-8 flex justify-center xl:px-0">
+    <div className="w-full px-4 py-4 flex justify-center xl:px-0">
       <div className="w-full max-w-2xl flex flex-col gap-3">
         <h2 className="text-white font-bold text-3xl">Today's Highlights</h2>
         <ul className="w-full grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] justify-items-center gap-4 lg:grid-cols-2">
