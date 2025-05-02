@@ -8,7 +8,7 @@ export default function Searchbar() {
           className="w-3/4 max-w-3xs bg-gray-500 border border-gray-300 rounded-lg p-2 hover:cursor-pointer"
         />
 
-        <div class="flex items-center justify-center w-10 h-10 bg-[#ffffff33] rounded-full cursor-pointer">
+        <div className="flex items-center justify-center w-10 h-10 bg-[#ffffff33] rounded-full cursor-pointer">
           <img
             alt="location icon"
             src="/icons/location.svg"
