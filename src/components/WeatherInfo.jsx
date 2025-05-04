@@ -5,7 +5,7 @@ export default function WeatherInfo({ loading, response, units }) {
   const { main, weather } = response || {};
   const weatherTemp = Math.round(main?.temp) || 0;
   const weatherIcon = weather?.[0].icon || "04d";
-  console.log(weather);
+  const tempUnits = units === "metric" ? "C" : "F";
 
   return (
     <div className="w-full h-4/7 flex flex-col justify-center items-center">
@@ -23,9 +23,7 @@ export default function WeatherInfo({ loading, response, units }) {
 
           <div className="w-full h-3/7 text-white flex justify-center items-center">
             <h2 className="text-9xl">{weatherTemp}</h2>
-            <h2 className="text-7xl text-gray-400">
-              °{units === "metric" ? "C" : "F"}
-            </h2>
+            <h2 className="text-7xl text-gray-400">°{tempUnits}</h2>
           </div>
         </>
       )}

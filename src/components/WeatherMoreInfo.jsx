@@ -1,10 +1,9 @@
 import React from "react";
+import formatUnixDate from "../utils/formatUnixDate";
 
 export default function WeatherMoreInfo({ loading, response }) {
   const { dt, name, sys, weather } = response || {};
-  const date = dt ? new Date(dt * 1000) : null;
-  const options = { weekday: "short", day: "numeric", month: "short" }; // Options for formatting
-  const formatted = date ? date.toLocaleDateString("en-US", options) : ""; // Format the date
+  const formattedDate = formatUnixDate(dt); // Format function "weekday, day month"
   const weatherDescription = weather?.[0].description || "";
   const place = `${name}, ${sys?.country}`;
 
@@ -25,7 +24,7 @@ export default function WeatherMoreInfo({ loading, response }) {
       <div className="w-full h-1/2 flex flex-col justify-center gap-4 pb-5 text-gray-400">
         <div className="flex justify-center items-center gap-4">
           <p className="font-semibold">Today</p>
-          <p>{formatted}</p>
+          <p>{formattedDate}</p>
         </div>
 
         <div className="flex justify-center gap-2">
