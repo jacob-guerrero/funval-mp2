@@ -11,7 +11,7 @@ function App() {
   const { loading, response } = useData(
     `https://api.openweathermap.org/data/2.5/weather?q=london&units=${units}&appid=${API_KEY}`
   );
-  const { loading:loadingForecast, response:responseForecast } = useData(
+  const { loading: loadingForecast, response: responseForecast } = useData(
     `https://api.openweathermap.org/data/2.5/forecast?q=london&units=${units}&appid=${API_KEY}`
   );
 
@@ -25,7 +25,7 @@ function App() {
           units={units}
           setUnits={setUnits}
         />
-        <Highlights />
+        <Highlights loading={loading} response={response} units={units} />
         <Footer />
       </div>
     </div>
