@@ -4,6 +4,14 @@ import ForecastCard from "./ForecastCard";
 import LoadingSpinner from "./LoadingSpinner";
 
 export default function Forecast({ loading, response, units, setUnits }) {
+  const activeMetric =
+    units === "metric"
+      ? "text-[#110E3C] bg-[#E7E7EB]"
+      : "text-[#E7E7EB] bg-[#585676]";
+  const activeImperial =
+    units === "imperial"
+      ? "text-[#110E3C] bg-[#E7E7EB]"
+      : "text-[#E7E7EB] bg-[#585676]";
   const dataForecast = getForecast(response);
   const handleClick = (e) => {
     const unitSelected = e.target.value;
@@ -19,14 +27,14 @@ export default function Forecast({ loading, response, units, setUnits }) {
       <div className="w-full flex flex-col items-center justify-center py-4 md:py-0">
         <div className="w-full max-w-2xl px-4 py-8 flex justify-end gap-5 md:py-7 xl:px-0">
           <button
-            className="w-10 h-10 pr-1 pt-1 text-center text-xl font-bold text-[#110E3C]  bg-[#E7E7EB] rounded-full cursor-pointer"
+            className={`w-10 h-10 pr-1 pt-1 text-center text-xl font-bold ${activeMetric} rounded-full cursor-pointer`}
             value={"C"}
             onClick={handleClick}
           >
             °C
           </button>
           <button
-            className="w-10 h-10 pr-1 pt-1 text-center text-xl font-bold text-[#E7E7EB]  bg-[#585676] rounded-full cursor-pointer"
+            className={`w-10 h-10 pr-1 pt-1 text-center text-xl font-bold ${activeImperial} rounded-full cursor-pointer`}
             value={"F"}
             onClick={handleClick}
           >

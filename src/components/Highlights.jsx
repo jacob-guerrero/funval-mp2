@@ -9,8 +9,10 @@ export default function Highlights({ loading, response, units }) {
   const weatherWindUnits = units === "metric" ? "ms" : "mph";
   const weatherWindDirection = getWindDirection(weatherWindDeg);
   const weatherHumidity = main?.humidity || 0;
-  const weatherVisibilityKm = (visibility / 1000).toFixed(2) || 0;
-  const weatherVisibilityMiles = (visibility * 0.000621371192).toFixed(2) || 0;
+  const weatherVisibilityKm =
+    (visibility && (visibility / 1000).toFixed(2)) || 0;
+  const weatherVisibilityMiles =
+    (visibility && (visibility * 0.000621371192).toFixed(2)) || 0;
   const weatherVisibility =
     units === "metric" ? weatherVisibilityKm : weatherVisibilityMiles;
   const weatherVisibilityUnits = units === "metric" ? "km" : "miles";
@@ -39,7 +41,8 @@ export default function Highlights({ loading, response, units }) {
                     <img
                       src="/icons/navigation.svg"
                       alt="wind"
-                      className={`w-6 transform rotate-${weatherWindDeg}`}
+                      className={`w-6`}
+                      style={{ rotate: `${weatherWindDeg}deg` }}
                     />
                   </picture>
                   <p className="font-semibold">{weatherWindDirection}</p>
