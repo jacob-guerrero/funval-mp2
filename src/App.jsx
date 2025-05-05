@@ -6,7 +6,7 @@ import Main from "./components/Main";
 import useData from "./hooks/useData";
 
 function App() {
-  const API_KEY = import.meta.env.VITE_WEATHER_KEY2;
+  const API_KEY = import.meta.env.VITE_WEATHER_KEY;
   const IPINFO_API_KEY = import.meta.env.VITE_IPINFO_KEY;
 
   // State for latitude and longitude
